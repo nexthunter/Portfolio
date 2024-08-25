@@ -393,6 +393,7 @@ span{
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    padding: 20px;
 }
 .service-box:hover{
     background: white;
@@ -404,7 +405,8 @@ span{
     display:flex;
     flex-direction : column;
     text-align: left;
-    max-height: 200px;
+    height: 100px;
+    width: 50px;
     justify-content: left;
     align-items: baseline;
     padding: 5rem 5rem;
@@ -579,7 +581,7 @@ span{
     }
     .services-container{
         padding-bottom: 7rem;
-        grid-template-columns: repeat();
+        grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
 }
@@ -590,11 +592,15 @@ span{
     .timeline-items::before{
         left: 7px;
     }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even){
         padding-left: 37px;
     }
-    .timeline-do{
+    .timeline-dot{
         left: 0;
     }
     .services{
@@ -603,7 +609,7 @@ span{
     .reviews .wrapper{
         grid-template-columns: repeat(1,1fr);
     }
-    .contactform{
+    .contact form{
         flex-direction: column;
     }
     .footer{
@@ -627,7 +633,7 @@ span{
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
-    .navbar .active{
+    .navbar.active{
         display: block;
     }
     .navbar a{
