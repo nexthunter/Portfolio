@@ -203,23 +203,25 @@
         <h2 class="heading">Contact<span>Me</span></h2>
 
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="5d1b91f2-598f-44aa-bc68-19e0447292a7">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder="full name">
-                    <input type="email" placeholder="email">
-                </div>
-                <div class="input-box">
-                    <input type="number" placeholder="phone number">
-                    <input type="text" placeholder="subject">
-                </div>
-            </div>
+         <input type="hidden" name="access_key" value="5d1b91f2-598f-44aa-bc68-19e0447292a7">
+    
+        <div class="input-group">
+           <div class="input-box">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+           </div>
+           <div class="input-box">
+            <input type="number" name="phone_number" placeholder="Phone Number" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+           </div>
+        </div>
 
-            <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
-                <input type="submit" value="Send message" class="btn">
-            </div>
-        </form>
+    <div class="input-group-2">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </div>
+    </form>
+
     </section>
 
     <footer class="footer">
