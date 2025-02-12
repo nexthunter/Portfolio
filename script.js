@@ -13,7 +13,7 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
                     ('active')
             })
         }
@@ -24,3 +24,10 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuIcon.classList.remove("bx-x");
+        navbar.classList.remove("active");
+    });
+});
+
